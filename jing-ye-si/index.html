@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Risam_blog</title>
+<title>静夜思 | Risam_blog</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,13 +12,24 @@
 <link rel="stylesheet" href="https://risamchen.github.io//styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="Risam的小屋">
+    <meta name="description" content="床前明月光 疑是地上霜
+举头望明月 低头思故乡
+方法😜🍒🍕🍖🛴🚝🚄
+
+" />
+    <meta name="keywords" content="古诗" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,40 +99,37 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">静夜思</h2>
+            <div class="post-date">2020-04-15</div>
+            
+            <div class="post-content" v-pre>
+              <p>床前明月光 疑是地上霜<br>
+举头望明月 低头思故乡<br>
+<strong>方法</strong>😜🍒🍕🍖🛴🚝🚄</p>
+<!-- more -->
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
+              <div class="tag-container">
+                
+                  <a href="https://risamchen.github.io/Ehy3_TDDN/" class="tag">
+                    古诗
+                  </a>
+                
+              </div>
+            
+            
+
+            
               
-                
-                  <article class="post">
-                    <a href="https://risamchen.github.io/tian-jing-si-qiu-sha/">
-                      <h2 class="post-title">
-                        天净沙秋思
-                      </h2>
-                    </a>
-                  </article>
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://risamchen.github.io/jing-ye-si/">
-                      <h2 class="post-title">
-                        静夜思
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -142,6 +150,29 @@ var app = new Vue({
 </script>
 
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '0d164ab6a90254bc0ff6',
+        clientSecret: 'd50d71200ad473a19e05a2c04f3bf8e2270da5f0',
+        repo: 'risam_comment',
+        owner: 'risamchen',
+        admin: ['risamchen'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
